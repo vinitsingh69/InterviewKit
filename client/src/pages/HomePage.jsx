@@ -1,4 +1,4 @@
-import illustration from "@/assets/interview-amico.svg"
+import illustration from "@/assets/lastTry.svg"
 import FormComponent from "../components/forms/FormComponent"
 import Footer from "../components/common/Footer"; 
 
