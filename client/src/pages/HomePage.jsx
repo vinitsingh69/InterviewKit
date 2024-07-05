@@ -1,6 +1,6 @@
 // import interview from "../assets/interview.svg"
-import illustration from "@/assets/illustration.svg"
-// import illustration from "@/assets/interview.svg"
+// import illustration from "@/assets/illustration.svg"
+import illustration from "@/assets/interview.svg"
 import FormComponent from "../components/forms/FormComponent"
 import Footer from "../components/common/Footer"; 
 
