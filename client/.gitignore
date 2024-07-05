@@ -20,6 +20,5 @@ node_modules
 *.sln
 *.sw?
 .env
-
-public
+ 
  
