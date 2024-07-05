@@ -3,7 +3,7 @@ const ACTIONS = {
 	JOIN_ACCEPTED: "join-accepted",
 	USER_JOINED: "user-joined",
 	USER_DISCONNECTED: "user-disconnected",
-	SYNC_FILES: "sync-files",
+	SYNC_FILES: "sync-files",   // <--- This is the action that is being emitted
 	FILE_CREATED: "file-created",
 	FILE_UPDATED: "file-updated",
 	FILE_RENAMED: "file-renamed",
