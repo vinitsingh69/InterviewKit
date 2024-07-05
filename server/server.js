@@ -4,7 +4,7 @@ require("dotenv").config()
 const http = require("http")
 const cors = require("cors")
 const ACTIONS = require("./utils/actions")
-
+ 
 const { Server } = require("socket.io")
 
 app.use(express.json())
@@ -171,7 +171,7 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
 	res.send("API is running successfully")
 })
 

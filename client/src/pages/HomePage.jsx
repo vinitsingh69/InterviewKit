@@ -12,7 +12,7 @@ function HomePage() {
                 <div className="flex w-full animate-up-down justify-center sm:w-1/2 sm:pl-4">
                     <img
                         src={interview}
-                        alt="Code Sync Illustration"
+                        alt="InterviewKit Illustration"
                         className="mx-auto w-[250px] sm:w-[400px]"
                     />
                 </div>
