@@ -32,7 +32,7 @@ Code Sync is a collaborative, real-time code editor where users can seamlessly c
 
 ## 🚀 Live Preview
 
-You can view the live preview of the project [here].
+You can view the live preview of the project [here](https://interviewkit.vercel.app/).
 
 ## 💻 Tech Stack
 
