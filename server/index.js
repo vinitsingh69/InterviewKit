@@ -4,16 +4,18 @@ require("dotenv").config()
 const http = require("http")
 const cors = require("cors")
 const ACTIONS = require("./utils/actions")
- 
-const { Server } = require("socket.io")
+const path = require("path")
+
 
 app.use(express.json())
-
+   
 app.use(cors())
+
+const { Server } = require("socket.io")
+app.use(express.static(path.join(__dirname, "public"))) 
 
 
 const server = http.createServer(app)
-
 const io = new Server(server, {
 	cors: {
 		origin: "*",
@@ -152,7 +154,9 @@ io.on("connection", (socket) => {
 
 	socket.on(ACTIONS.REQUEST_DRAWING, () => {
 		const roomId = getRoomId(socket.id)
-		socket.broadcast.to(roomId).emit(ACTIONS.REQUEST_DRAWING, { socketId: socket.id })
+		socket.broadcast
+			.to(roomId)
+			.emit(ACTIONS.REQUEST_DRAWING, { socketId: socket.id })
 	})
 
 	socket.on(ACTIONS.SYNC_DRAWING, ({ drawingData, socketId }) => {
@@ -171,8 +175,8 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000
 
-app.get("/", (req, res) => { 
-	res.send("API is running successfully")
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "..", "public", "index.html"))
 })
 
 server.listen(PORT, () => {
