@@ -17,6 +17,7 @@ const SocketProvider = ({ children }) => {
         () =>
             io(BACKEND_URL, {
                 reconnectionAttempts: 2,
+                
             }),
         [],
     )
