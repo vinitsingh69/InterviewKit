@@ -176,6 +176,7 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 3000
 
 app.get("/", (req, res) => {
+	// Send the index.html file
 	res.sendFile(path.join(__dirname, "..", "public", "index.html"))
 })
 
