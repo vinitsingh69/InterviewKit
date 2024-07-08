@@ -6,7 +6,7 @@ const cors = require("cors")
 const ACTIONS = require("./utils/actions")
 const path = require("path")
 
-
+dotenv.config()
 app.use(express.json())
    
 app.use(cors())
