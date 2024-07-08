@@ -5,20 +5,21 @@ const http = require("http")
 const cors = require("cors")
 const ACTIONS = require("./utils/actions")
 const path = require("path")
+app.use(cors())
 
 dotenv.config()
 app.use(express.json())
-   
-app.use(cors())
 
 const { Server } = require("socket.io")
-app.use(express.static(path.join(__dirname, "public"))) 
+app.use(express.static(path.join(__dirname, "public")))
 
 
 const server = http.createServer(app)
 const io = new Server(server, {
 	cors: {
 		origin: "*",
+		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+		credentials: true,
 	},
 })
 
@@ -177,6 +178,11 @@ const PORT = process.env.PORT || 3000
 
 app.get("/", (req, res) => {
 	// Send the index.html file
+	res.setHeader("Access-Control-Allow-Origin", "*")
+	res.setHeader("Access-Control-Allow-Credentials", "true");
+	res.setHeader("Access-Control-Max-Age", "1800");
+	res.setHeader("Access-Control-Allow-Headers", "content-type");
+	res.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS");
 	res.sendFile(path.join(__dirname, "..", "public", "index.html"))
 })
 

@@ -29,7 +29,7 @@ const SocketProvider = ({ children }) => {
             toast.error("Failed to connect to the server")
         },
         [setStatus],
-    )
+    ) 
 
     const handleUsernameExist = useCallback(() => {
         toast.dismiss()
