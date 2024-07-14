@@ -24,12 +24,12 @@ function FileContextProvider({ children }) {
         // Check if file with same name already exists
         let num = 1
         let fileExists = files.some((file) => file.name === name)
-
+        
         while (fileExists) {
             name = `${name} (${num++})`
             fileExists = files.some((file) => file.name === name)
             if (!fileExists) break
-        }
+        }  
 
         const id = uuidv4()
         const file = {
@@ -50,7 +50,10 @@ function FileContextProvider({ children }) {
                 if (file.id === id) {
                     file.content = content
                 }
+                
+                socket.emit(ACTIONS.FILE_UPDATED, { file })
                 return file
+                
             }),
         )
         // File updated event sent to server
@@ -114,7 +117,7 @@ function FileContextProvider({ children }) {
             zip.file(file.name, blobFile)
         })
         zip.generateAsync({ type: "blob" }).then(function (content) {
-            saveAs(content, "Code-Sync-Files.zip")
+            saveAs(content, "InterviewKit.zip")
         })
     }
 

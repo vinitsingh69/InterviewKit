@@ -6,8 +6,8 @@ const SettingContext = createContext()
 
 const defaultSettings = {
     theme: "Dracula",
-    language: "Javascript",
-    fontSize: "16",
+    language: "javascript",
+    fontSize: "18",
     fontFamily: "Space Mono", 
 }
 

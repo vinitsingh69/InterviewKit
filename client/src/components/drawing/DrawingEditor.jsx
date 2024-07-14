@@ -12,10 +12,12 @@ function DrawingEditor() {
         <Tldraw
             inferDarkMode
             forceMobile={isMobile}
-            defaultName="Editor"
+            defaultName="Editor" 
             className="z-0"
+
+            // Set the initial drawing data
         >
-            <ReachEditor />
+        <ReachEditor />
         </Tldraw>
     )
 }

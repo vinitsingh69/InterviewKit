@@ -62,7 +62,7 @@ function Editor() {
             
         }
         return extensions
-    },[language, currentFile?.name])
+    },[language, filteredUsers])
 
     return (
         <CodeMirror

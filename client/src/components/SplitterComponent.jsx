@@ -12,13 +12,13 @@ function SplitterComponent({ children }) {
     const getGutter = () => {
         const gutter = document.createElement("div")
         gutter.className = "h-full cursor-e-resizer hidden md:block"
-        gutter.style.backgroundColor = "#d2d2d2"
+        gutter.style.backgroundColor = "#e0d6d6"
         return gutter
     }
 
     const getSizes = () => {
         if (isMobile) return [0, width]
-        const sizes = JSON.parse(getItem("editorSizes")) || [35, 65]
+        const sizes = JSON.parse(getItem("editorSizes")) || [25, 75]
         return isSidebarOpen ? sizes : [0, width]
     }
 
@@ -37,7 +37,7 @@ function SplitterComponent({ children }) {
     }
 
     const getGutterStyle = () => ({
-        width: "7px",
+        width: "5px",
         display: isSidebarOpen && !isMobile ? "block" : "none",
     })
 
@@ -51,7 +51,7 @@ function SplitterComponent({ children }) {
             direction="horizontal"
             gutterAlign="center"
             cursor="e-resize"
-            snapOffset={30}
+            snapOffset={20}
             gutterStyle={getGutterStyle}
             onDrag={handleGutterDrag}
             className="flex h-screen min-h-screen max-w-full items-center justify-center overflow-x-hidden"

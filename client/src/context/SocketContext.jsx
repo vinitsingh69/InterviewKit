@@ -11,8 +11,7 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 const SocketContext = createContext()
 
 const SocketProvider = ({ children }) => {
-    const { setUsers, setStatus, setCurrentUser, drawingData, setDrawingData } =
-        useAppContext()
+    const { setUsers, setStatus, setCurrentUser, drawingData, setDrawingData } =  useAppContext()
     const socket = useMemo(
         () =>
             io(BACKEND_URL, {
