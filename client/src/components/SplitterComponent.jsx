@@ -51,7 +51,7 @@ function SplitterComponent({ children }) {
             direction="horizontal"
             gutterAlign="center"
             cursor="e-resize"
-            snapOffset={20}
+            snapOffset={30}
             gutterStyle={getGutterStyle}
             onDrag={handleGutterDrag}
             className="flex h-screen min-h-screen max-w-full items-center justify-center overflow-x-hidden"
