@@ -33,10 +33,7 @@ function Sidebar() {
                 <TabButton tabName={TABS.FILES} icon={tabIcons[TABS.FILES]} />
                 <TabButton tabName={TABS.CHATS} icon={tabIcons[TABS.CHATS]} />
                 <TabButton tabName={TABS.RUN} icon={tabIcons[TABS.RUN]} />
-                <TabButton
-                    tabName={TABS.CLIENTS}
-                    icon={tabIcons[TABS.CLIENTS]}
-                />
+                <TabButton tabName={TABS.CLIENTS}icon={tabIcons[TABS.CLIENTS]}/>
                 <TabButton
                     tabName={TABS.SETTINGS}
                     icon={tabIcons[TABS.SETTINGS]}

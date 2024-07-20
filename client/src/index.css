@@ -14,7 +14,7 @@ body {
     font-family: "Space Grotesk", sans-serif;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 
     --sb-track-color: #3d404a;
     --sb-thumb-color: #e1e1ffb3;

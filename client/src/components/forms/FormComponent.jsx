@@ -123,7 +123,7 @@ function FormComponent() {
         
         <ThemeProvider theme={darkTheme}>
         <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-4 p-4 sm:w-[500px] sm:p-8">
-            <h1 className="text-4xl sm:text-5xl ">InterviewKit</h1>
+            <h1 className="text-4xl sm:text-5xl text-white">InterviewKit</h1>
             <p className="mb-4 text-center md:mb-8 ">
                     {"Code, Chat, Collaborate and Illustrate synchronously"}
             </p>
