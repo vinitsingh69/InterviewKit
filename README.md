@@ -34,6 +34,10 @@ InterviewKit is a collaborative, real-time code editor where users can seamlessl
 
 You can view the live preview of the project [here](https://interviewkit.vercel.app/).
 
+## 🚀 To Understand Workflow of application See this MindMap
+Workflow [here](https://interviewkit.vercel.app/).
+
+
 ## 💻 Tech Stack
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
